@@ -1,1 +1,1 @@
-CREATE INDEX IF NOT EXISTS idx_events_type ON event USING HASH (event_type);
+CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_events_type_btree ON event USING BTREE (event_type);
